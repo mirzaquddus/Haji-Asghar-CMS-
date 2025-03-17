@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Materials Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Haji Asghar Construction Materials Store</h1>
+        <a href="cart.html">🛒 View Cart</a>
+    </header>
+
+    <section class="products">
+        <div class="product" data-name="Cement" data-price="1200">
+            <img src="cement.jpg" alt="Cement">
+            <h3>Cement</h3>
+            <p>Price: Rs. 1200 per bag</p>
+            <button onclick="addToCart('Cement', 1200)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-name="Steel" data-price="150000">
+            <img src="steel.jpg" alt="Steel">
+            <h3>Steel</h3>
+            <p>Price: Rs. 150,000 per ton</p>
+            <button onclick="addToCart('Steel', 150000)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-name="Bricks" data-price="12">
+            <img src="bricks.jpg" alt="Bricks">
+            <h3>Bricks</h3>
+            <p>Price: Rs. 12 per piece</p>
+            <button onclick="addToCart('Bricks', 12)">Add to Cart</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
