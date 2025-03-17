@@ -11,36 +11,25 @@
     <header>
         <h1>Construction Materials Store</h1>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shopping</a></li>
-                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
-            </ul>
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="cement">Cement</option>
+                <option value="steel">Steel</option>
+                <option value="bricks">Bricks</option>
+                <option value="pipes">Pipes</option>
+                <option value="tiles">Tiles</option>
+                <option value="paint">Paint</option>
+                <option value="electrical">Electrical</option>
+            </select>
+            <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
 
-    <section class="categories">
-        <h2>Categories</h2>
-        <ul>
-            <li><button onclick="filterCategory('cement')">Cement & Concrete</button></li>
-            <li><button onclick="filterCategory('bricks')">Bricks & Sand</button></li>
-            <li><button onclick="filterCategory('steel')">Steel & Iron</button></li>
-            <li><button onclick="filterCategory('plumbing')">Plumbing Materials</button></li>
-            <li><button onclick="filterCategory('electrical')">Electrical Supplies</button></li>
-            <li><button onclick="filterCategory('tiles')">Tiles & Ceramics</button></li>
-            <li><button onclick="filterCategory('paint')">Paints & Finishing</button></li>
-            <li><button onclick="filterCategory('wood')">Wood & Doors</button></li>
-            <li><button onclick="filterCategory('roofing')">Roofing Materials</button></li>
-            <li><button onclick="filterCategory('tools')">Construction Tools</button></li>
-        </ul>
-    </section>
-
-    <section class="products">
-        <h2>Available Products</h2>
-        <div id="product-list">
-            <!-- Products will be loaded here dynamically -->
+    <main>
+        <div id="products-container">
+            <!-- Products Will be Added Here Dynamically -->
         </div>
-    </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
