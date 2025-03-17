@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Materials Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Construction Materials Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shopping</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><button onclick="filterCategory('cement')">Cement & Concrete</button></li>
+            <li><button onclick="filterCategory('bricks')">Bricks & Sand</button></li>
+            <li><button onclick="filterCategory('steel')">Steel & Iron</button></li>
+            <li><button onclick="filterCategory('plumbing')">Plumbing Materials</button></li>
+            <li><button onclick="filterCategory('electrical')">Electrical Supplies</button></li>
+            <li><button onclick="filterCategory('tiles')">Tiles & Ceramics</button></li>
+            <li><button onclick="filterCategory('paint')">Paints & Finishing</button></li>
+            <li><button onclick="filterCategory('wood')">Wood & Doors</button></li>
+            <li><button onclick="filterCategory('roofing')">Roofing Materials</button></li>
+            <li><button onclick="filterCategory('tools')">Construction Tools</button></li>
+        </ul>
+    </section>
+
+    <section class="products">
+        <h2>Available Products</h2>
+        <div id="product-list">
+            <!-- Products will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
