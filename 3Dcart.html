@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <a href="index.html">🛍️ Continue Shopping</a>
+    </header>
+
+    <section id="cart-items"></section>
+    <h2 id="total-price"></h2>
+    
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartItems = document.getElementById("cart-items");
+        let totalPrice = 0;
+
+        cart.forEach(item => {
+            let div = document.createElement("div");
+            div.innerHTML = `<h3>${item.name}</h3> <p>Price: Rs. ${item.price}</p>`;
+            cartItems.appendChild(div);
+            totalPrice += item.price;
+        });
+
+        document.getElementById("total-price").innerText = "Total: Rs. " + totalPrice;
+    </script>
+</body>
+</html>
