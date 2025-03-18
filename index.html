@@ -295,3 +295,34 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <input type="text" id="adminUser" placeholder="Username">
+        <input type="password" id="adminPass" placeholder="Password">
+        <button onclick="adminLogin()">Login</button>
+    </div>
+
+    <script>
+        function adminLogin() {
+            let user = document.getElementById("adminUser").value;
+            let pass = document.getElementById("adminPass").value;
+
+            if (user === "admin" && pass === "1234") {
+                localStorage.setItem("adminLogin", "true");
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid Login!");
+            }
+        }
+    </script>
+</body>
+</html>
