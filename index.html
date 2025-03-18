@@ -163,3 +163,79 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Partner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Become a Partner</h2>
+        <p>Select your category and fill the form to register as a partner.</p>
+
+        <label for="partnerType">Choose Your Category:</label>
+        <select id="partnerType" onchange="showForm()">
+            <option value="">-- Select --</option>
+            <option value="materialProducer">Material Producer (کارخانے والے)</option>
+            <option value="materialSeller">Material Seller (دکاندار)</option>
+            <option value="serviceProvider">Service Provider (مزدور / کاریگر)</option>
+            <option value="other">Other (دیگر)</option>
+        </select>
+
+        <!-- Forms -->
+        <form id="materialProducerForm" class="partner-form">
+            <h3>Material Producer Registration</h3>
+            <input type="text" placeholder="Company Name" required>
+            <input type="text" placeholder="Owner Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <textarea placeholder="Product Details" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <form id="materialSellerForm" class="partner-form">
+            <h3>Material Seller Registration</h3>
+            <input type="text" placeholder="Business Name" required>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="Address" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <form id="serviceProviderForm" class="partner-form">
+            <h3>Service Provider Registration</h3>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select required>
+                <option value="">Select Trade</option>
+                <option value="plumbing">Plumber</option>
+                <option value="electrician">Electrician</option>
+                <option value="construction">Construction Worker</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+
+        <form id="otherForm" class="partner-form">
+            <h3>Other Registration</h3>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Describe Your Work" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="hidden">
+            <h3>Thank You!</h3>
+            <p>Your form has been submitted successfully. We will contact you soon.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
