@@ -103,3 +103,63 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Our Professional Services</h1>
+        <p>Get high-quality construction, plumbing, electrical, and painting services at your doorstep!</p>
+    </header>
+
+    <section class="services">
+        <div class="service-card" onclick="showServiceDetails('construction')">
+            <img src="images/construction.jpg" alt="Construction Service">
+            <h2>Construction</h2>
+            <p>Complete house and building construction.</p>
+        </div>
+
+        <div class="service-card" onclick="showServiceDetails('plumbing')">
+            <img src="images/plumbing.jpg" alt="Plumbing Service">
+            <h2>Plumbing</h2>
+            <p>Pipe fitting, water tanks, leakage fixing.</p>
+        </div>
+
+        <div class="service-card" onclick="showServiceDetails('electrical')">
+            <img src="images/electrical.jpg" alt="Electrical Service">
+            <h2>Electrical</h2>
+            <p>Wiring, panels, switchboards, and more.</p>
+        </div>
+
+        <div class="service-card" onclick="showServiceDetails('painting')">
+            <img src="images/painting.jpg" alt="Painting Service">
+            <h2>Painting</h2>
+            <p>Wall paint, design work, wallpapers.</p>
+        </div>
+    </section>
+
+    <section id="service-details" class="hidden">
+        <h2 id="service-title"></h2>
+        <p id="service-description"></p>
+        <p><strong>Estimated Price:</strong> <span id="service-price"></span></p>
+        
+        <h3>Book This Service</h3>
+        <form id="booking-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number" required>
+            <textarea id="address" placeholder="Your Address" required></textarea>
+            <button type="submit">Book Now</button>
+        </form>
+
+        <p id="confirmation-message" class="hidden">Thank you! Your request has been submitted.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
